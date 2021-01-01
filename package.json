@@ -1,0 +1,23 @@
+{
+  "name": "uptasks",
+  "version": "1.0.0",
+  "description": "Proyecto destinado a la administración de tareas.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iath-dev/UpTask.git"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "Jesus Daniel Neira Lara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iath-dev/UpTask/issues"
+  },
+  "homepage": "https://github.com/iath-dev/UpTask#readme"
+}
