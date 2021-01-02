@@ -2,10 +2,10 @@
   "name": "uptasks",
   "version": "1.0.0",
   "description": "Proyecto destinado a la administración de tareas.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "reinstall": "npm install"
   },
   "repository": {
@@ -25,7 +25,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
