@@ -7,7 +7,8 @@ const path = require('path')
 
 const bodyParser = require('body-parser')
 
-const db = require('./config/db')
+const db = require('./config/db');
+const { vardump } = require('./helpers');
 
 require('./models/Project.model')
 
@@ -32,6 +33,13 @@ app.set('view engine', 'pug')
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.set('views', path.join(__dirname, './views'))
+
+// Pasar vardump a la aplicación
+app.use((req, res, next) => {
+    res.locals.vardump = vardump
+
+    next()
+})
 
 // Definiendo el Router
 app.use('/', router())

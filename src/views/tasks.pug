@@ -1,0 +1,14 @@
+extends ./layout.pug
+
+block container
+    .contenido-principal
+        h1 #{project.nombre}
+
+        // TODO - Formulario para añadir tarea.
+
+        // TODO - Listado de pendientes
+
+        // Acciónes
+        .contenedor-acciones
+            a(href=`/project/edit/${project.id}` class="boton") Editar Proyecto
+            button#eliminar-proyecto(class="boton eliminar") Eliminar Proyecto

@@ -1,0 +1,15 @@
+extends ./layout.pug
+include mixins/createProject
+
+
+block container
+    .contenido-principal
+        h1 #{page}
+
+        if errors
+            each error in errors
+                .alerta.error #{error.msg}
+
+        +createProject(project)
+
+        

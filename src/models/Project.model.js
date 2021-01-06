@@ -1,4 +1,6 @@
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
+const shortid = require('shortid');
+const slug = require('slug');
 
 const db = require('../config/db');
 
@@ -11,6 +13,15 @@ const Project = db.define('Project', {
     },
     nombre: Sequelize.STRING(64),
     url: Sequelize.STRING
+}, {
+    hooks: {
+        beforeCreate(project) {
+            const url = slug(project.nombre).toLowerCase().concat('-', shortid.generate())
+            console.log(url)
+
+            project.url = url
+        }
+    }
 })
 
 module.exports = Project
